@@ -7,7 +7,7 @@
   */
   namespace App\Config;
 
-  class ConnectMysql
+  class ConnectDb
   {
     private static ?\PDO $instancePdo = null;
 
