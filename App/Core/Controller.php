@@ -18,7 +18,6 @@
     public function loadTemplate(string $nomeView, array $dados = array())
     {
       $this->dados = $dados;
-      require "../App/Config/Config.php";
       require "../App/Views/Parcial/template.php";
     }
 
