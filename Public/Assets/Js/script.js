@@ -31,8 +31,32 @@ $(document).ready(function(){
 		let sobrenome = $("#sobrenome").val();
 		let email = $("#email").val();
 		let telefone = $("#telefone").val();
-		let estado = $("#estado").val();
+		let id_estado = $("#estado").val();
 		let cidade = $("#cidade").val();
+		if(nome == "") {
+			window.alert("Por favor informe um nome valido");
+			return false;
+		}
+		if(sobrenome == "") {
+			window.alert("Por favor informe um sobrenome valido");
+			return false;
+		}
+		if(email == "" || email.indexOf("@") == -1) {
+			window.alert("Por favor informe um endereço de e-mail valido");
+			return false;
+		}
+		if(telefone == "") {
+			window.alert("Por favor informe um telefone valido");
+			return false;
+		}
+		if(id_estado == "") {
+			window.alert("Por favor selecine um estado valido");
+			return false;
+		}
+		if(cidade == "") {
+			window.alert("Por favor selecine uma cidade valida");
+			return false;
+		}
 		$.ajax({
 			type:"POST",
 			url:BASE_URL+"cadastro/salvarCadastro",
@@ -42,7 +66,7 @@ $(document).ready(function(){
 				sobrenome:sobrenome,
 				email:email,
 				telefone:telefone,
-				estado:estado,
+				id_estado:id_estado,
 				cidade:cidade
 			},
 			success:function(data) {
