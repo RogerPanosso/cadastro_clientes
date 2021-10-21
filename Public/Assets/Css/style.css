@@ -1,0 +1,18 @@
+body {
+	margin: 0!important;
+	padding: 0!important;
+}
+.container {
+	max-width: 800px!important;
+	margin: auto!important;
+	padding: 15px!important;
+}
+form label {
+	font-size: 16px!important;
+	font-style: unset!important;
+	font-weight: 387!important;
+	color: #353535!important;
+}
+form input, select {
+	border:1px solid #CFCFCF!important;
+}

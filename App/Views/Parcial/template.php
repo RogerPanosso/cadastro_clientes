@@ -8,6 +8,7 @@
 	<title>Cadastro de Clientes</title>
 	<link rel="stylesheet" type="text/css" href="<?=BASE_URL;?>Public/Bootstrap/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="<?=BASE_URL;?>Public/Bootstrap/css/bootstrap-reboot.min.css"/>
+	<link rel="stylesheet" type="text/css" href="<?=BASE_URL;?>Public/Assets/Css/style.css"/>
 </head>
 <body>
 	<article>
@@ -20,8 +21,9 @@
 			
 		</footer>
 	</article>
-	<script type="text/javascript">const base_url = "<?=BASE_URL;?>";</script>
 	<script src="<?=BASE_URL;?>Public/jQuery/jquery.min.js"></script>
 	<script src="<?=BASE_URL;?>Public/Bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">var BASE_URL = '<?php echo BASE_URL; ?>';</script>
+	<script src="<?=BASE_URL;?>Public/Assets/Js/script.js"></script>
 </body>
 </html>

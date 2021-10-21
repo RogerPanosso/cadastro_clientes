@@ -7,6 +7,7 @@
 
 	use App\Core\Controller;
 	use App\Models\Estados;
+	use App\Models\Cidades;
 
 	class homeController extends Controller {
 
@@ -19,6 +20,16 @@
 			$estados = new Estados();
 			$dados["estados"] = $estados->getEstadosAll();
 			$this->loadTemplate("home", $dados);
+		}
+
+		public function getCidadesUsuario() {
+			$cidades = new Cidades();
+			$id_estado = filter_input(INPUT_POST, "id_estado");
+			if($id_estado == true):
+				$array = $cidades->getCidadesUsuario($id_estado);
+			endif;
+			echo json_encode($array);
+			exit;
 		}
 	}
 ?>
